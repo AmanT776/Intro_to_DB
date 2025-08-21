@@ -1,0 +1,23 @@
+import mysql.connector
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+db_password = os.getenv("db_password")
+
+cnx = mysql.connector.connect(
+    user = "aman",
+    password=db_password,
+    host="localhost"
+)
+
+my_cursor = cnx.cursor()
+
+create_db = my_cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
+
+if not cnx:
+    print('database connection error')
+
+if(create_db):
+    print("Database 'alx_book_store' created successfully!")
