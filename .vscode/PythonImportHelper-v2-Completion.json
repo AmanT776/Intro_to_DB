@@ -1,0 +1,55 @@
+[
+    {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "db_password",
+        "kind": 5,
+        "importPath": "MySQLServer",
+        "description": "MySQLServer",
+        "peekOfCode": "db_password = os.getenv(\"db_password\")\ntry:\n    cnx = mysql.connector.connect(\n    user = \"aman\",\n    password=db_password,\n    host=\"localhost\"\n)\nexcept mysql.connector.Error as e:\n    print(e)\nmy_cursor = cnx.cursor()",
+        "detail": "MySQLServer",
+        "documentation": {}
+    },
+    {
+        "label": "my_cursor",
+        "kind": 5,
+        "importPath": "MySQLServer",
+        "description": "MySQLServer",
+        "peekOfCode": "my_cursor = cnx.cursor()\ncreate_db = my_cursor.execute(\"CREATE DATABASE IF NOT EXISTS alx_book_store\")\nif(create_db):\n    print(\"Database 'alx_book_store' created successfully!\")",
+        "detail": "MySQLServer",
+        "documentation": {}
+    },
+    {
+        "label": "create_db",
+        "kind": 5,
+        "importPath": "MySQLServer",
+        "description": "MySQLServer",
+        "peekOfCode": "create_db = my_cursor.execute(\"CREATE DATABASE IF NOT EXISTS alx_book_store\")\nif(create_db):\n    print(\"Database 'alx_book_store' created successfully!\")",
+        "detail": "MySQLServer",
+        "documentation": {}
+    }
+]
